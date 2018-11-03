@@ -97,7 +97,7 @@ def fake_input_rock(monkeypatch):
 def test_full_game(capsys, fake_input_rock):
     rps.main()
     captured = capsys.readouterr()
-    assert "rock, paper, or scissors?" in captured.out """
+    assert "rock, paper, or scissors?" in captured.out
 
 def test_wrong_play_result_in_repeated_question(): #cp ... completed process
     #cp = subprocess.run(["python", "rps.py"], encoding = "cp1250", stdout = subprocess.PIPE) #cp1250 = utf-8
@@ -106,4 +106,4 @@ def test_wrong_play_result_in_repeated_question(): #cp ... completed process
                         stdout = subprocess.PIPE,
                         input ="dragon\nrock\n",
                         check=True) #cp1250 = utf-8
-    assert cp.stdout.count("rock, paper, or scissors?") == 2
+    assert cp.stdout.count("rock, paper, or scissors?") == 2"""
